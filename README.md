@@ -9,6 +9,7 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - rendere possibile la configurazione di strutture di generazione di suono più articolate e dinamiche.
 - rendere possibile il controllo di architetture polifoniche/parafoniche
 - semplificare l'interfacciamento con master keyboard, sequencer e tools sofware vari
-- rendere più veloce la riconfigurazione (remapping) delle strutture modulari, riducendo al minimo il patching manuale e rendendo possibile richiamare "on tage" configurazioni pre memorizzate.
-- 
+- velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale e rendendo possibile il richiamo immediato (on stage) di configurazioni pre memorizzate.
+  
+
 
