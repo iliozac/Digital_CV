@@ -5,11 +5,20 @@ L'obiettivo è di sviluppare, testare e rendere disponibile in modalità open un
 Lo studio di questo nuovo standard è finalizzato a dare nuovo slancio progettuale e produttivo al comparto dei moduli Eurorack e in generale al settore della sintesi musicale analogica.
 Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei quali una porta di comunicazione specifica può essere implementata in fase di progetto, sia per garantire le retrocompatibilità con i moduli classici, controllati tramite ingressi CV, Gate e Sync (tramite l'utilizzo di specifiche interfacce esterne o posizionate all'interno dei case modulari).
 
-### Principi di base
+### Concetti di base
 - rendere possibile la configurazione di strutture di generazione di suono più articolate e dinamiche.
 - rendere possibile il controllo di architetture polifoniche/parafoniche
 - semplificare l'interfacciamento con master keyboard, sequencer e tools sofware vari
-- velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale e rendendo possibile il richiamo immediato (on stage) di configurazioni pre memorizzate.
+- velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale
+- rendendo possibile il richiamo immediato (on stage) di configurazioni pre memorizzate.
+- mantenere la retrocompatibilità con moduli classici
+
+## Interfaccia Hardware
+- tipologia di interfaccia: Bus seriale singola linea riferita a massa
+- range di tensione del segnale: 0-5 Volt
+- connessione: jack 3.5 mm stereo (con solo Sleeve e Ring usati?)
+- logica di rilevamento collisione: mista Hw/Sw (circuiteria logica + interrupt)
+- 
   
 
 
