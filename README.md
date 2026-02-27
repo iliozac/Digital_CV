@@ -24,7 +24,6 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - tipologia: self-clocking 1-wire (PWM based)
 - struttura rete: multi Master-Slave. Più Master possono trasmettere in una rete a cui sono collegati vari Slave (rispettando priorità e regole per l'occupazione del bus)
 - struttura dati: i dati sono organizzati in frame/pacchetti e sono trasmessi in modo continuo e "sincronizzato".
-- la frequenza di trasmissione dei frame può essere modulata entro un certo range (50-100 frame/sec) in modo da fornire al sistema un clock generale per sincronizzare la velocità (BPM) in una modalità simile a quella utilizzata dallo standard MIDI con i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI).
-- 
+- la frequenza di trasmissione dei frame può essere modulata entro un certo range (50-100 frame/sec) in modo da generare un clock di sistema per il controllo della velocità (BPM) in una modalità simile a quella utilizzata nello standard MIDI tramite i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI). 
 
-
+### Organizzazione e struttura dei dati
