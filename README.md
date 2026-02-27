@@ -13,12 +13,17 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - rendendo possibile il richiamo immediato (on stage) di configurazioni pre memorizzate.
 - mantenere la retrocompatibilità con moduli classici
 
-## Interfaccia Hardware
+### Interfaccia Hardware
 - tipologia di interfaccia: Bus seriale singola linea riferita a massa
 - range di tensione del segnale: 0-5 Volt
 - connessione: jack 3.5 mm stereo (con solo Sleeve e Ring usati?)
-- logica di rilevamento collisione: mista Hw/Sw (circuiteria logica + interrupt)
+- logica di rilevamento collisione: mista Hw/Sw (circuiteria logica + interrupt)solo 
+
+### Protocollo di trasmissione
+- velocità di trasmissione 128Kbit/sec
+- tipologia self-clocking 1-wire (PWM based)
+- struttura rete Multi Master-Slave: più Master possono coesistere in una rete che collega vari Slave (rispettando priorità e regole per l'occupazione del bus)
+- struttura dati: i dati sono organizzati in frame e pacchetti che vengono trasmessi in modo continuo e sincronizzato
 - 
-  
 
 
