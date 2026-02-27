@@ -14,8 +14,8 @@ Inoltre questo nuovo sistema è pensato sia per nuovi prodotti, nei quali una po
 - rendere possibile il controllo di architetture polifoniche/parafoniche.
 - semplificare l'interfacciamento con master keyboard, sequencer midi e tools sofware vari.
 - velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale.
-- rendendo possibile il richiamo immediato (on stage) di configurazioni pre memorizzate.
-- mantenere la retrocompatibilità con moduli classici.
+- rendere possibile il richiamo immediato (on stage) di configurazioni pre memorizzate (preset), fondamentali per gli utilizzi "live".
+- mantenere la retrocompatibilità con i moduli classici.
 
 ### Interfaccia Hardware
 - tipologia di interfaccia: Bus seriale singola linea riferita a massa.
