@@ -26,4 +26,7 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - struttura dati: i dati sono organizzati in frame/pacchetti e sono trasmessi in modo continuo e "sincronizzato".
 - la frequenza di trasmissione dei frame può essere modulata entro un certo range (50-100 frame/sec) in modo da generare un clock di sistema per il controllo della velocità (BPM) in una modalità simile a quella utilizzata nello standard MIDI tramite i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI). 
 
-### Organizzazione e struttura dei dati
+### Dimensionamento e struttura dei frame dati
+Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistemma è proposta una prima versione di protocollo standard, che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa può essere considerata una beta release su cui effetture test e verifiche di affidabilità del sistema proposto.
+
+
