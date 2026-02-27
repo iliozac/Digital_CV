@@ -27,6 +27,10 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - la frequenza di trasmissione dei frame può essere modulata entro un certo range (50-100 frame/sec) in modo da generare un clock di sistema per il controllo della velocità (BPM) in una modalità simile a quella utilizzata nello standard MIDI tramite i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI). 
 
 ### Dimensionamento e struttura dei frame dati
-Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistemma è proposta una prima versione di protocollo standard, che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa può essere considerata una beta release su cui effetture test e verifiche di affidabilità del sistema proposto.
+Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistema, nasce questa prima versione di standard "dCV" (digital CV), che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa è da considere come una Beta release su cui si possono effetture test e verifiche di affidabilità della tecnologia proposta.
+Sulle specifiche di questa prima versione saranno progettati e resi disponibili i primi prototipi hardware con cui testare le funzionalità del sistema proposto (interfaccia MIDI -> dCV, dCV -> CV/gate/sync, ecc...)
+
+
+
 
 
