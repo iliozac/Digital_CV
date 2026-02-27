@@ -20,10 +20,11 @@ Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei qual
 - logica di rilevamento collisione: mista Hw/Sw (circuiteria logica + interrupt)solo 
 
 ### Protocollo di trasmissione
-- velocità di trasmissione 128Kbit/sec
-- tipologia self-clocking 1-wire (PWM based)
-- struttura rete Multi Master-Slave: più Master possono coesistere in una rete che collega vari Slave (rispettando priorità e regole per l'occupazione del bus)
+- velocità di trasmissione: 128Kbit/sec
+- tipologia: self-clocking 1-wire (PWM based)
+- struttura rete: multi Master-Slave. Più Master possono trasmettere in una rete a cui sono collegati vari Slave (rispettando priorità e regole per l'occupazione del bus)
 - struttura dati: i dati sono organizzati in frame e pacchetti che vengono trasmessi in modo continuo e sincronizzato
+- la frequenza di trasmissione dei frame può essere fissa o variabile (entro un certo range) per permettere di sincronizzare gli eventi su una determinata velocità (BPM), in una modalità simile a quella del messaggio MIDI SysEx Clock.
 - 
 
 
