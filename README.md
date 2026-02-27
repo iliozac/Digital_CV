@@ -1,8 +1,10 @@
 # Standard HW e SW di comunicazione seriale per sistemi modulari eurorack
 
 L'obiettivo è di sviluppare, testare e rendere disponibile in modalità open un nuovo standard di comunicazione per l'interfacciamento e il pilotaggio di moduli eurorack e sintetizzatori analogici stand alone.
+Lo standard MIDI è stato sviluppato principalmente per rendere interoperabili tra loro varie tipologie di strumenti musicali elettronici, partendo dal presupposto che la tecnologia digitale stava ormai diventando imprescindibile dalla progettazione di nuovi strumenti sia nel controllo che nella generazione dei suoni. Quello che non potevano prevedere è che più avanti nel tempo la tecnologia analogica avrebbe riconquistato un suo spazio e un suo mercato in una forma più organizzata e funzionale, quella dello standard Eurorack ideato da Dieter Doepfer.
+Questa forma di standard ha consentito una vera rivoluzione creativa nel modo di concepire la sintesi musicale e nel modo di progettare e utilizzare l'hardware (ovvero i moduli). In questo nuovo comparto lo standard MIDI si è però rivelato fortemente limitato se non totalmente incompatibile, nonostante molti siano stati i tentativi di adattarlo e applicarlo nel mondo Eurorack in una sorta di "accanimento terapeutico" che non teneva in considerazione il fatto che il MIDI è nato nei primi anni '80, per risolvere le esigente tecniche di quel tempo, e da allora è rimasto inalterato.
 
-Lo studio di questo nuovo standard è finalizzato a dare nuovo slancio progettuale e produttivo al comparto dei moduli Eurorack e in generale al settore della sintesi musicale analogica.
+Lo studio di un nuovo standard di comunicazione, espressamente pensato per i sistemi modulari (ma non solo), è finalizzato a dare un ulteriore impulso progettuale e produttivo al comparto dei moduli Eurorack e in generale al settore della sintesi musicale analogica.
 Questo nuovo sistema di comunicazione è pensato sia per nuovi prodotti nei quali una porta di comunicazione specifica può essere implementata in fase di progetto, sia per garantire le retrocompatibilità con i moduli classici, controllati tramite ingressi CV, Gate e Sync (tramite l'utilizzo di specifiche interfacce esterne o posizionate all'interno dei case modulari).
 
 ### Concetti di base
