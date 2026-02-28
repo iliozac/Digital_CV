@@ -32,7 +32,7 @@
 - velocità di trasmissione: 128Kbit/sec
 - tipologia: self-clocking 1-wire (PWM based)
 - struttura rete: multi Master-Slave. Più Master possono trasmettere in una rete a cui sono collegati vari Slave (rispettando priorità e regole per l'occupazione del bus)
-- struttura dati: i dati sono organizzati in frame/pacchetti e sono trasmessi in modo continuo e "sincronizzato".
+- struttura dati: i dati sono organizzati in frame/pacchetti e sono trasmessi in modo continuo e "sincronizzato" (la prima grande differenza con il MIDI).
 - la frequenza di trasmissione dei frame può essere modulata entro un range determinato (50-100 frame/sec) in modo da generare un clock di sistema per il controllo della velocità (BPM) in una modalità simile a quella utilizzata nello standard MIDI tramite i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI). 
 
 ### Dimensionamento e struttura dei frame dati
