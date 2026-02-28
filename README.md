@@ -6,7 +6,7 @@
 
   Questa forma di standard ha consentito una vera rivoluzione creativa nel modo di concepire la sintesi musicale e nel modo di progettare e utilizzare l'hardware (ovvero i moduli) per assemblare in modo molto più creativo e personale strumenti per la creazione di suoni. In questo nuovo comparto lo standard MIDI si è quindi rivelato fortemente limitato se non totalmente incompatibile, nonostante molti siano stati i tentativi di adattarlo e applicarlo nel mondo Eurorack con una sorta di "accanimento terapeutico", senza mai prendere in considerazione il fatto che il MIDI è nato quasi mezzo secolo per risolvere esigente tecniche molto diverse e per 40 anni è rimasto inalterato.
   
-  La versione 2.0, nata nel 2020, sicuramente offre funzionalità molto più complesse ma per assurdo ancora più distanti dalle esigenze del settore Eurorack che segue una sua filosofia ben precisa.
+  La versione 2.0, nata nel 2020, sicuramente offre funzionalità molto più complesse ma per assurdo ancora più distanti dalle esigenze del settore Eurorack che segue una sua filosofia ben delineata.
   
   Lo studio di uno standard di comunicazione tecnologicamente più evoluto ed espressamente pensato per i sistemi modulari e gli strumenti analogici ha uno scopo ben preciso: dare un ulteriore impulso progettuale e produttivo al comparto dei moduli Eurorack e in generale al settore della sintesi musicale analogica.
   Per questo motivo è pensato sia per nuovi prodotti, nei quali una porta di comunicazione specifica può essere implementata in fase di progetto, sia per garantire le retrocompatibilità con i moduli classici, controllati tramite ingressi CV, Gate e Sync (tramite l'utilizzo di specifiche interfacce esterne o posizionate all'interno dei case modulari).
