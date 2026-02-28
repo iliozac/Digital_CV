@@ -37,7 +37,7 @@
 
 ### Dimensionamento e struttura dei frame dati
 Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistema, nasce questa prima versione di standard "dCV" (digital CV), che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa è da considere come una Beta release con cui effetture test e verifiche di affidabilità della tecnologia proposta.
-Sulle specifiche di questa prima versione saranno infatti progettati e resi disponibili i primi prototipi hardware che renderanno possibile testare le funzionalità del sistema proposto con i sistemi Eurorack esistenti (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
+Sulla base delle specifiche di questa prima release saranno infatti progettati e resi disponibili i primi prototipi hardware che renderanno possibile testare le funzionalità del sistema proposto con i sistemi Eurorack esistenti (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
 
 segue...
 
