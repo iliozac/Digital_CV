@@ -14,7 +14,7 @@
 ### Concetti di base
 - coprire il gap tecnologico che limita le applicazioni dei sistemi modulari rispetto alle catene di suono gestite via Midi
 - rendere possibile la configurazione di strutture di generazione di suono più articolate e dinamiche.
-- rendere semplice e funzionale il controllo di architetture polifoniche/parafoniche.
+- rendere semplice e funzionale il controllo di strutture modulari polifoniche/parafoniche.
 - semplificare l'interfacciamento con master keyboard, sequencer midi e tools sofware vari.
 - velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale.
 - rendere possibile il richiamo immediato (on stage) di configurazioni pre memorizzate (preset), fondamentali per gli utilizzi "live".
