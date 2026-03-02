@@ -22,10 +22,9 @@
 - rendere possibile il richiamo immediato (on stage) di configurazioni pre memorizzate (preset), fondamentali per gli utilizzi "live".
 - mantenere la retrocompatibilità con i moduli classici.
 
-
 ### SPECIFICHE GENERALI DEL SISTEMA
 
-### Interfaccia Hardware
+### Interfaccia fisica (Hardware)
 - tipologia: Bus seriale singola linea riferita a massa.
 - range di tensione del segnale: 0-5 Volt.
 - connessione: jack 3.5 mm stereo (con solo Sleeve e Ring usati?).
