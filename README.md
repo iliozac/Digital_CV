@@ -51,13 +51,13 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
 
    La sincronizzazione con strumenti esterni può quindi avvenire sostanzialmente in due modi: 1) Via connessione MIDI (o USB midi) e opportuna conversione MIDI->dCV (tramite interfaccia installata nel modulare). 2) Direttamente tramite connessione dCV, con device esterni che implementano un uscita dCV. 
       
-3. ***Gestione di strutture polifoniche***
+2. ***Gestione di strutture polifoniche***
 
    Data la complessità e la concentrazione dei collegamenti necessari, l'implementazione di strutture di generazione polifoniche o parafoniche in un sistema modulare classico, attraverso la tecnica del patching (collegamenti via cavi jack), risulta particolarmente complessa già in caso di un utilizzo "in studio" ma sarebbe praticamente impossibile in contesti di performance "Live".
   Questo è dovuto a quello che possiamo definire il "peccato originale" della categoria dei modulari, ovvero il suo sistema di controllo basato su tensioni analogiche... i fatidici segnali "CV".
 
-   Un sistema di controllo basato su dCV consentirebbe di sfruttare molti dei vantaggi di un sistema di controllo digitale classico: stabilità, affidabilità, flessibilità, gestione intelligente delle configurazioni (es. memorizzazione dei setup), ecc... senza stravolgere la filosofia originaria del modulari. Tramite il patching potrebbe essere stabilita la struttura generale del sistema (numero di voci di polifonia, ordine dei devices che intervengono nella catena di generazione/modifica suoni, ecc...) mentre il bus dCV potrebbe controllare in tempo reale il flusso dei parametri (CV, Gate, Sync, Clock) da inviare ai vari moduli della catena.
-  Il bus dCV è in grado di interconnettere decine di moduli e trasportare su un unico filo le informazioni che in cablaggio classico necessiterebbero di un numero impressionante di cavetti di collegamento.
+   Un sistema di controllo basato su bus dCV consentirebbe di sfruttare molti dei vantaggi di controllo digitale classico: stabilità, affidabilità, flessibilità, gestione intelligente delle configurazioni (es. memorizzazione dei setup), ecc... senza stravolgere la filosofia originaria del modulari. Tramite il patching potrebbe essere definita la struttura generale del sistema (tipologia e numero di oscillatori, voci di polifonia, ordine dei devices che intervengono nella catena di generazione/modifica suoni, ecc...) mentre tramite il bus dCV si potrebbe controllare il flusso dei parametri (CV, Gate, Sync, Clock) da inviare ai vari moduli della catena, modificare in tempo reale configurazioni e setup senza spostare nemmeno una patch.
+  Al bus dCV possono essere connessi decine di moduli e su un unico filo possono transitare una quantità enorme di parametri e comandi che in cablaggio classico necessiterebbero di un numero impressionante di collegamenti fisici (patch).
 
 
 
