@@ -43,8 +43,10 @@ Sulla base delle specifiche di questa prima release saranno infatti progettati e
 
 ### ARCHITETTURA E PRINCIPIO DI FUNZIONAMENTO
 
-Per determinare le specifiche di funzionamento del sistema analizziamo un primo elenco di necessità/criticità specifiche dei sistemi modulari per le quali il nuovo standard potrebbe offrire una soluzione o un miglioramento prestazionale.
+Per determinare le specifiche di funzionamento del sistema analizziamo un primo elenco di problematiche specifiche dei sistemi modulari per le quali il nuovo standard potrebbe offrire una soluzione o un miglioramento prestazionale.
 
+  ### Valutazione problematiche da risolvere
+  
 1. ***Sincronizzazione con strumenti esterni (synth, master keyboard, sequencer, software DAW, ecc...)***.
    
    Il protocollo **dCV** si basa sulla trasmissione continua di **frame di dati** (fino a 1024 bit/frame) che vengono aggiornati ad una frequenza massima di 100 frame/sec. In questo modo qualsiasi device collegato al bus (sia master che slave) può inviare/ricevere informazioni in modo ordinato e sincronizzato. Uno dei dati che possono essere trasmessi è il comando "dClock" (posto all'inizio del frame) che, in modo analogo al SysEx Clock del protocollo MIDI, consente di "sincronizzare" i moduli ad una determinata velocità generale. Una delle caratteristiche del sistema dCV è infatti quella di poter collegare più device master in contemporanea (fino a un massimo di 16), a condizione che uno dei device master sia configurato come "***Master Sound Manager***", ovvero un dispositivo master con una priorità superiore a tutti gli altri, che stabilisce la velocità generale del sistema (BPM) e "regola il traffico" dei dati nel bus. Ad ogni dispositivo Master (che può essere esterno o interno al sistema modulare) dev'essere quindi assegnato un indirizzo da 0 a 15 e il disposivo a cui assegneremo l'indirizzo 0 sarà il Master Sound Manager (MSM).
@@ -60,7 +62,7 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
 
    Il dCV, a differenza del MIDI che trasmette informazioni di tipo "asincrono" (la pressione di un tasto o la modifica di un parametro), è pensato per mantenere costantemente disponibili e aggiornate le informazioni sul bus, anche quando non ci sono eventi specifici, esattamente come in un sistema modulare in cui tutte le tensioni CV sono sempre "disponibili", anche se sono a 0. Inoltre sul bus dCV sarebbero costantemente disponibili anche le informazioni necessarie alla sincronizzazione degli eventi (inviluppi, step di progressione di sequencer, clock di sistema, ecc...). Un modulo a 4 VCO in cui fosse previsto in ingresso dCV (input digitale) e la relativa logica/sw di gestione del protocollo seriale dCV (molto semplice) potrebbe recuperare le informazioni di frequenza e durata per tutti i 4 VCO dal bus dCV, lo stesso sarebbe per qualsiasi altro modulo con sezioni circuitali multiple (VCA, VCF). 
 
-4. ***Patching ridotto all'essenziale e alta configurabilità***
+3. ***Patching ridotto all'essenziale e alta configurabilità***
 
    Un sistema di controllo basato su bus dCV consentirebbe di sfruttare molti dei vantaggi di un controllo digitale classico: stabilità, affidabilità, flessibilità, gestione intelligente delle configurazioni (es. memorizzazione dei setup), ecc... senza però stravolgere la filosofia costruttiva originaria del modulari. Tramite il patching potrebbe essere definita la struttura generale del sistema (tipologia e numero di oscillatori, voci di polifonia, ordine dei devices che intervengono nella catena di generazione/modifica suoni, ecc...) mentre tramite il bus dCV si potrebbe controllare il flusso dei parametri (CV, Gate, Sync, Clock) da inviare ai vari moduli della catena, modificare in tempo reale configurazioni e setup senza spostare nemmeno una patch.
 
@@ -68,12 +70,17 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
 
    Il dCV è pensato anche come tool per facilitare la configurazione di qualsiasi tipo di architettura modulare, dalle più semplici alle più complesse. Da quelle controllate da un singolo Master device (es. una tastiera Midi o un sequencer) che pilota una singola linea monofonica, fino ad architetture polifoniche o con più master devices (arpeggiatori, drum machine, sequencer, tastiere) che intervengono nella generazione e nel controllo dei suoni. 
 
+
+### Definizione del protocollo
+
 Per ora fermiamoci alla valutazione di queste 3 esigenze, che già da sole potrebbero giustificare l'adozione del sistema dCV, ed entriamo nello specifico del protocollo e delle caratteristiche che deve avere per soddisfare le esigenze di cui sopra.
 
-Nella fase di stesura delle specifiche abbiamo già definito i parametri principali ovvero:
+In fase di prima stesura delle specifiche abbiamo definito 3 valori ovvero:
 
 - velocità di trasmissione seriale: 128 Kbit/sec
 - frequenza dei frame dati: 100 frame/sec
 - numero massimo di Master devices: 16
-- 
 
+manca ancora un valore fondamentale per la definizione del protocollo: la quantità di dati da trasmettere per ogni frame.
+In un intervallo di tempo di 10 mS (se consideriamo 100 frame/sec) ad una frequenza di 128Kbit/sec potrei trasmettere frame da massimo 1280 bit. Per non "strozzare" il bus e prevedere un po' di tolleranza stabiliamo un limite massimo di 1024 bit/frame. In questo modo anche un Master device che dovesse gestire da solo l'intero flusso di dati da trasmettere, avrebbe ancora un 20% abbondante di tempo a disposizione per occuparsi di altro.
+Abbiamo quindi 1024 bit a disposizione per trasmettere dati su 16 canali contemporaneamente (che corrispondono anche al numero massimo di Master device che possono condividere lo stesso bus dCV)
