@@ -1,6 +1,6 @@
 # Primo documento di specifica dello standard "dCV" (digital CV), inteso come architettura Hardware e Software di comunicazione seriale dedicata ai sistemi modulari (Eurorack e altri analogici).
 
-## PREMESSA
+### PREMESSE
 
   L'obiettivo è di sviluppare, testare e rendere disponibile in modalità open un nuovo standard di comunicazione per l'interfacciamento e il pilotaggio di moduli eurorack e sintetizzatori analogici stand alone.
 
@@ -13,7 +13,7 @@
   Lo studio di uno standard di comunicazione tecnologicamente più evoluto ed espressamente pensato per i sistemi modulari e gli strumenti analogici ha uno scopo ben preciso: dare un ulteriore impulso progettuale e produttivo al comparto dei moduli Eurorack e in generale al settore della sintesi musicale analogica.
   Per questo motivo è pensato sia per nuovi prodotti, nei quali una porta di comunicazione specifica può essere implementata in fase di progetto, sia per garantire la retrocompatibilità con i moduli classici, controllati tramite ingressi CV, Gate e Sync (tramite l'utilizzo di specifiche interfacce esterne o posizionate all'interno dei case modulari).
 
-### Concetti di base
+### Obiettivi
 - coprire il gap tecnologico che limita le applicazioni dei sistemi modulari rispetto alle catene di suono gestite via Midi
 - rendere possibile la configurazione di strutture di generazione di suono più articolate e dinamiche.
 - rendere semplice e funzionale il controllo di strutture modulari polifoniche/parafoniche.
@@ -22,10 +22,11 @@
 - rendere possibile il richiamo immediato (on stage) di configurazioni pre memorizzate (preset), fondamentali per gli utilizzi "live".
 - mantenere la retrocompatibilità con i moduli classici.
 
-## ARCHITETTURA DEL SISTEMA
+
+### SPECIFICHE GENERALI DEL SISTEMA
 
 ### Interfaccia Hardware
-- tipologia di interfaccia: Bus seriale singola linea riferita a massa.
+- tipologia: Bus seriale singola linea riferita a massa.
 - range di tensione del segnale: 0-5 Volt.
 - connessione: jack 3.5 mm stereo (con solo Sleeve e Ring usati?).
 - logica di rilevamento collisione: mista Hw/Sw (circuiteria logica + interrupt). 
