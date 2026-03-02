@@ -68,3 +68,12 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
 
    Il dCV è pensato anche come tool per facilitare la configurazione di qualsiasi tipo di architettura modulare, dalle più semplici alle più complesse. Da quelle controllate da un singolo Master device (es. una tastiera Midi o un sequencer) che pilota una singola linea monofonica, fino ad architetture polifoniche o con più master devices (arpeggiatori, drum machine, sequencer, tastiere) che intervengono nella generazione e nel controllo dei suoni. 
 
+Per ora fermiamoci alla valutazione di queste 3 esigenze, che già da sole potrebbero giustificare l'adozione del sistema dCV, ed entriamo nello specifico del protocollo e delle caratteristiche che deve avere per soddisfare le esigenze di cui sopra.
+
+Nella fase di stesura delle specifiche abbiamo già definito i parametri principali ovvero:
+
+- velocità di trasmissione seriale: 128 Kbit/sec
+- frequenza dei frame dati: 100 frame/sec
+- numero massimo di Master devices: 16
+- 
+
