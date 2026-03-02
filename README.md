@@ -83,5 +83,8 @@ In fase di prima stesura delle specifiche abbiamo definito 3 valori ovvero:
 
 manca ancora un valore fondamentale per la definizione del protocollo: la quantità di dati da trasmettere per ogni frame.
 In un intervallo di tempo di 10 mS (se consideriamo 100 frame/sec) ad una frequenza di 128Kbit/sec possono essere trasmettessi frame da massimo 1280 bit. Per non "strozzare" il bus e prevedere un po' di tolleranza stabiliamo un limite massimo di 1024 bit/frame. In questo modo anche un Master device che dovesse gestire da solo l'intero flusso di dati da trasmettere, avrebbe ancora un 20% abbondante di tempo a disposizione per occuparsi di altro.
-Abbiamo quindi 1024 bit a disposizione per trasmettere dati su 16 canali contemporaneamente (che corrispondono anche al numero massimo di Master device che possono condividere lo stesso bus dCV). A questo punto è necessario definire tipologia,  quantità e dimensione dei dati da trasmettere, 
+Abbiamo quindi 1024 bit a disposizione per trasmettere dati su 16 canali contemporaneamente (che corrispondono anche al numero massimo di Master device che possono condividere lo stesso bus dCV). 
+Resta da definire il numero di Slave device che possono essere collegati al bus e per stabilire questo numero è necessario definire tipologia, quantità e dimensione dei dati da trasmettere.
+
+
 
