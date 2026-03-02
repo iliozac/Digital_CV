@@ -41,7 +41,7 @@
 Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistema, nasce questa prima versione di standard "dCV" (digital CV), che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa è da considere come una Beta release con cui effetture test e verifiche di affidabilità della tecnologia proposta.
 Sulla base delle specifiche di questa prima release saranno infatti progettati e resi disponibili i primi prototipi hardware che consentiranno di testare le funzionalità del sistema proposto implementandolo in strutture Eurorack esistenti (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
 
-### ARCHITETTURA E PRINCIPIO DI FUNZIONAMENTO
+### ARCHITETTURA E SPECIFICHE DI FUNZIONAMENTO
 
 Per determinare le specifiche di funzionamento del sistema analizziamo un primo elenco di problematiche specifiche dei sistemi modulari per le quali il nuovo standard potrebbe offrire una soluzione o un miglioramento prestazionale.
 
