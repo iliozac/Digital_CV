@@ -4,7 +4,7 @@
 
   L'obiettivo è di sviluppare, testare e rendere disponibile in modalità open un nuovo standard di comunicazione per l'interfacciamento e il pilotaggio di moduli eurorack e sintetizzatori analogici stand alone.
 
-  Lo standard MIDI, sviluppato nei primi anni '80, è stato progettato per risolvere le esigenze di interoperabilità tra gli strumenti musicali elettronici, partendo dal presupposto che la tecnologia digitale stava ormai monopolizzando la produzione di nuovi strumenti, sia nel controllo che nella generazione dei suoni. Quello che non potevano prevedere è che più avanti nel tempo la tecnologia analogica avrebbe riconquistato un suo spazio e un suo mercato in una forma più organizzata e funzionale, grazie alla nascita dello standard Eurorack ideato da Dieter Doepfer, concepito per funzionare senza un'infrastruttura di comunicazione digitale come il MIDI.
+  Lo standard MIDI, sviluppato nei primi anni '80, è stato progettato per risolvere le esigenze di interoperabilità e sincronizzazione tra gli strumenti musicali elettronici, partendo dal presupposto che la tecnologia digitale stava ormai monopolizzando la produzione di nuovi strumenti, sia nel controllo che nella generazione dei suoni. Quello che gli ideatori del MIDI non poteva prevedere è che più avanti nel tempo la tecnologia analogica avrebbe riconquistato un suo spazio e un suo mercato in una forma più organizzata e funzionale, grazie alla nascita dello standard Eurorack ideato da Dieter Doepfer, concepito per funzionare senza un'infrastruttura di comunicazione digitale come il MIDI.
 
   Questa forma di standard ha consentito una vera rivoluzione creativa nel modo di concepire la sintesi musicale e nel modo di progettare e utilizzare l'hardware (ovvero i moduli) per assemblare in modo creativo e personale strumenti per creare suoni. In questo nuovo comparto lo standard MIDI si è quindi rivelato fortemente limitato se non totalmente incompatibile, nonostante molti siano stati i tentativi di adattarlo e applicarlo nel mondo Eurorack, con una sorta di "accanimento terapeutico", senza mai prendere in considerazione il fatto che il MIDI è nato quasi mezzo secolo fa per risolvere esigente tecniche molto diverse.
   
@@ -40,6 +40,17 @@
 ### Dimensionamento e struttura dei frame dati
 Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di device potenzialmente collegabili al sistema, nasce questa prima versione di standard "dCV" (digital CV), che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa è da considere come una Beta release con cui effetture test e verifiche di affidabilità della tecnologia proposta.
 Sulla base delle specifiche di questa prima release saranno infatti progettati e resi disponibili i primi prototipi hardware che consentiranno di testare le funzionalità del sistema proposto implementandolo in strutture Eurorack esistenti (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
+
+### ARCHITETTURA E PRINCIPIO DI FUNZIONAMENTO
+
+Per determinare le specifiche di funzionamento del sistema analizziamo un primo elenco di necessità/criticità specifiche dei sistemi modulari per le quali il nuovo standard potrebbe offrire una soluzione o un miglioramento prestazionale.
+
+1. ***Sincronizzazione con strumenti MIDI (synth, master keyboard, sequencer, software DAW, ecc...)***.
+   
+   Il protocollo dCV si basa sulla trasmissione continua di frame di dati (fino a 1024 bit/frame) con una frequenza di aggiornamento fino a 100 frame/sec. In questo modo qualsiasi device collegato al bus (sia master che slave) può inviare o ricevere informazioni in modo ordinato e sincronizzato. Uno dei dati che possono essere trasmessi è il comando "Clock" (tipicamente posto all'inizio del frame) che, in modo analogo al SysEx Clock del protocollo MIDI, consente di "sincronizzare" i moduli ad una determinata velocità generale (espressa in BPM). Una delle caratteristiche del sistema dCV è di consentire l'utilizzo del bus a più device master collegati in contemporanea (fino a 16), a condizione che vi sia un "Master Manager", ovvero un dispositivo master con una priorità superiore a tutti gli altri, che imposta la velocità generale e "regola il traffico" dei dati che possono transitare nel bus. Ad ogni dispositivo Master (che può essere esterno o interno al sistema modulare) viene assegnato un indirizzo da 0 a 15. Quello a cui viene assegnato l'indirizzo 0 sarà in Master Manager. 
+      
+3. Gestione di strutture 
+
 
 segue...
 
