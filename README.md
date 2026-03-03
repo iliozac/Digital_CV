@@ -94,8 +94,8 @@ Resta da definire il numero di Slave device che possono essere collegati al bus 
 Per testare il sistema dCV saranno sviluppati alcuni circuiti specifici:
   - Master keyboard **dCV** : circuito di scansione matrice di tastiera (con dinamica/aftertouch) e uscita **dCV**
   - Interfaccia **MIDI->dCV** : basata su Atmega328 per la conversione dallo standard MIDI a dCV
-  - Interfaccia **dCV->CV/Gate/Sync** : basata su Atmega 328 per la generazione di 8 uscite CV, 4 Gate e 2 Sync
-  - DCO a 2 Oscillatori x 4 voci di polifonia con ingresso di controllo **dCV** : Circuito basato su RP2350 con DCO ibrido analogico/wave-table
+  - Interfaccia **dCV->CV/Gate/Sync** : basata su Atmega 328 per la generazione di 8 uscite CV, 4 Gate e 2 Sync (relizzabile in forma di modulo Eurorack)
+  - DCO a 2 Oscillatori x 4 voci di polifonia con ingresso di controllo **dCV** : Circuito basato su RP2350 con DCO ibrido analogico/wave-table (relizzabile in forma di modulo Eurorack)
 
     
 
