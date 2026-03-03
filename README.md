@@ -25,6 +25,9 @@
 
 ### SPECIFICHE GENERALI DEL SISTEMA
 
+Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di dispositivi potenzialmente collegabili al sistema, nasce questa prima versione (ver. 0.1), da considere come versione prototipale su cui sarà possibile eseguire test di funzionalità e affidabilità della tecnologia proposta. A questa seguirà una prima versione Beta (1.0) ed eventuali successive quando necessarie a risolvere criticità o implementare funzionalità aggiuntive. 
+Sulla base delle specifiche di questa prima versione saranno infatti progettati e resi disponibili i primi prototipi hardware che consentiranno di testare le funzionalità del sistema proposto rendendo possibile la sua implementazione in strutture Eurorack classiche (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
+
 ### Interfaccia fisica (Hardware)
 - tipologia: Bus seriale singola linea riferita a massa.
 - range di tensione del segnale: 0-5 Volt.
@@ -37,10 +40,6 @@
 - struttura rete: multi Master-Slave. Più Master possono trasmettere in una rete a cui sono collegati vari Slave, rispettando priorità e regole per l'occupazione del bus (prima differenza dal MIDI)
 - struttura dati: i dati sono organizzati in frame (pacchetti) e sono trasmessi in modo continuo e "sincronizzato" (seconda differenza dal MIDI).
 - la frequenza di trasmissione dei frame può essere modulata entro un range determinato (50-100 frame/sec) in modo da generare un clock di sistema per il controllo della velocità (BPM) in una modalità simile a quella utilizzata nello standard MIDI tramite i messaggi SysEx Clock (questa modalità rende più immediata la compatibilità con il protocollo MIDI). 
-
-### Dimensionamento e struttura dei frame dati
-Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di dispositivi potenzialmente collegabili al sistema, nasce questa prima versione Beta (ver. 0.1), che non preclude la possibilità di sviluppare versioni successive qualora si riscontrassero limiti o si volessero implementare funzionalità aggiuntive. Questa è da considere come una Beta release con cui effetture test e verifiche di affidabilità della tecnologia proposta.
-Sulla base delle specifiche di questa prima release saranno infatti progettati e resi disponibili i primi prototipi hardware che consentiranno di testare le funzionalità del sistema proposto implementandolo in strutture Eurorack esistenti (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
 
 ### ARCHITETTURA E SPECIFICHE DI FUNZIONAMENTO
 
