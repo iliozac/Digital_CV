@@ -1,4 +1,4 @@
-# Primo documento di specifica dello standard "dCV" (digital CV), inteso come architettura Hardware e Software di comunicazione seriale dedicata ai sistemi modulari (Eurorack e altri analogici).
+# Documento di specifica dello standard "dCV" (digital CV), inteso come architettura Hardware e Software di comunicazione seriale dedicata ai sistemi modulari (Eurorack e altri analogici). Ver. Beta 0.1
 
 ### PREMESSE
 
