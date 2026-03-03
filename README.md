@@ -51,9 +51,12 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
    
    Il protocollo **dCV** si basa sulla trasmissione continua di **frame di dati** aggiornati ad una frequenza massima di 100 frame/sec. In questo modo qualsiasi device collegato al bus (sia master che slave) può inviare e/o ricevere informazioni in modo ordinato e sincronizzato. Uno dei dati che possono essere trasmessi è il comando "dClock" (posto all'inizio del frame) che, in modo analogo al SysEx Clock del protocollo MIDI, consente di "sincronizzare" i moduli ad una determinata velocità generale. Una delle caratteristiche del sistema dCV è infatti quella di poter collegare più device master in contemporanea (fino a un massimo di 16), a condizione che uno dei device master sia configurato come "***Master Sound Manager***", ovvero un dispositivo master con una priorità superiore a tutti gli altri, che stabilisce la velocità generale del sistema (BPM) e "regola il traffico" dei dati nel bus. Ad ogni dispositivo Master (che può essere esterno o interno al sistema modulare) dev'essere quindi assegnato un indirizzo da 0 a 15 e il disposivo a cui assegneremo l'indirizzo 0 sarà il Master Sound Manager (MSM).
 
-   La sincronizzazione con strumenti esterni può quindi avvenire sostanzialmente in due modi: 1) Via connessione MIDI (o USB midi) e opportuna conversione MIDI->dCV (tramite interfaccia installata nel modulare). 2) Direttamente tramite connessione dCV, con device esterni che implementano un uscita dCV. 
+   La sincronizzazione con strumenti esterni può quindi avvenire sostanzialmente in due modi:
+
+    - Via connessione MIDI (o USB midi) e conversione MIDI->dCV (tramite interfaccia installata nel modulare).
+    - Direttamente tramite connessione dCV, con device esterni che implementano un uscita dCV. 
       
-2. ***Gestione di strutture polifoniche/parafoniche***
+3. ***Gestione di strutture polifoniche/parafoniche***
 
    Data la complessità e la concentrazione dei collegamenti necessari, l'implementazione di strutture di generazione polifoniche o parafoniche in un sistema modulare classico, attraverso la tecnica del patching (collegamenti via cavi jack), risulta particolarmente complessa già in caso di un utilizzo "in studio" e diventa praticamente impossibile da gestire in contesti di performance "Live".
   Questo è dovuto a quello che possiamo definire il "peccato originale" della categoria dei modulari, ovvero il suo sistema di controllo basato su tensioni analogiche... i fatidici segnali "CV".
@@ -62,7 +65,7 @@ Per determinare le specifiche di funzionamento del sistema analizziamo un primo 
 
    Il dCV, a differenza del MIDI che trasmette informazioni di tipo "asincrono" (la pressione di un tasto o la modifica di un parametro), è pensato per mantenere costantemente disponibili e aggiornate le informazioni sul bus, anche quando non ci sono eventi specifici, esattamente come in un sistema modulare in cui tutte le tensioni CV sono sempre "disponibili", anche se sono a 0. Inoltre sul bus dCV sarebbero costantemente disponibili anche le informazioni necessarie alla sincronizzazione degli eventi (inviluppi, step di progressione di sequencer, clock di sistema, ecc...). Un modulo a 4 VCO in cui fosse previsto in ingresso dCV (input digitale) e la relativa logica/sw di gestione del protocollo seriale dCV (molto semplice) potrebbe recuperare le informazioni di frequenza e durata per tutti i 4 VCO dal bus dCV, lo stesso sarebbe per qualsiasi altro modulo con sezioni circuitali multiple (VCA, VCF). 
 
-3. ***Patching ridotto all'essenziale e alta configurabilità***
+4. ***Patching ridotto all'essenziale e alta configurabilità***
 
    Un sistema di controllo basato su bus dCV consentirebbe di sfruttare molti dei vantaggi di un controllo digitale classico: stabilità, affidabilità, flessibilità, gestione intelligente delle configurazioni (es. memorizzazione dei setup), ecc... senza però stravolgere la filosofia costruttiva originaria del modulari. Tramite il patching potrebbe essere definita la struttura generale del sistema (tipologia e numero di oscillatori, voci di polifonia, ordine dei devices che intervengono nella catena di generazione/modifica suoni, ecc...) mentre tramite il bus dCV si potrebbe controllare il flusso dei parametri (CV, Gate, Sync, Clock) da inviare ai vari moduli della catena, modificare in tempo reale configurazioni e setup senza spostare nemmeno una patch.
 
