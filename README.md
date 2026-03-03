@@ -26,7 +26,7 @@
 ### SPECIFICHE GENERALI DEL SISTEMA
 
 Da una prima analisi delle necessità di quantità, precisione e velocità dei dati da trasmettere e del numero di dispositivi potenzialmente collegabili al sistema, nasce questa prima versione (ver. 0.1), da considere come versione prototipale su cui sarà possibile eseguire test di funzionalità e affidabilità della tecnologia proposta. A questa seguirà una prima versione Beta (1.0) ed eventuali successive quando necessarie a risolvere criticità o implementare funzionalità aggiuntive. 
-Sulla base delle specifiche di questa prima versione saranno infatti progettati e resi disponibili i primi prototipi hardware che consentiranno di testare le funzionalità del sistema proposto rendendo possibile la sua implementazione in strutture Eurorack classiche (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...)
+Sulla base delle specifiche di questa prima versione saranno infatti progettati e resi disponibili i primi prototipi hardware (+ eventuali librerie di codice C++) che consentiranno di testare le funzionalità del sistema proposto rendendo possibile la sua implementazione in strutture Eurorack esistenti senza la necessità di sviluppare nuovi moduli (interfaccia MIDI -> dCV, dCV -> CV/Gate/Sync, ecc...).
 
 ### Interfaccia fisica (Hardware)
 - tipologia: Bus seriale singola linea riferita a massa.
