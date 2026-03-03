@@ -90,5 +90,12 @@ manca ancora un valore fondamentale per la definizione del protocollo: la quanti
 Abbiamo quindi 1024 bit a disposizione per trasmettere dati su 16 canali contemporaneamente (che corrispondono anche al numero massimo di Master device che possono condividere lo stesso bus dCV). 
 Resta da definire il numero di Slave device che possono essere collegati al bus e per stabilire questo numero è necessario definire tipologia, quantità e dimensione dei dati da trasmettere.
 
+### HARDWARE DI TEST (prototipi)
+Per testare il sistema dCV saranno sviluppati 3 devices specifici:
+  - Master keyboard **dCV** : circuito di scansione matrice di tastiera (con dinamica/aftertouch) e uscita **dCV**
+  - DCO a 2 Oscillatori x 4 voci di polifonia con ingresso di controllo **dCV** : Circuito basato su RP2350 con DCO ibrido analogico/wave-table
+  - Interfaccia **MIDI->dCV** : basata su Atmega328 per la conversione dallo standard MIDI a dCV
+  - Interfaccia **dCV->CV/Gate/Sync** : basata su Atmega 328 per la generazione di 8 uscite CV, 4 Gate e 2 Sync
 
+    
 
