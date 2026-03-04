@@ -89,9 +89,11 @@ manca ancora un valore fondamentale per la definizione del protocollo: la quanti
   In un intervallo di tempo di 10 mS (se consideriamo 100 frame/sec) ad una frequenza di 128Kbit/sec possono essere trasmettessi frame da massimo 1280 bit. Per non "strozzare" il bus e prevedere un po' di tolleranza stabiliamo un limite massimo di 1024 bit/frame. In questo modo anche un Master device che dovesse gestire da solo l'intero flusso di dati da trasmettere, avrebbe ancora un 20% abbondante di tempo a disposizione per occuparsi di altro.
 Abbiamo quindi 1024 bit a disposizione per trasmettere dati su 16 canali contemporaneamente (che corrispondono anche al numero massimo di Master device che possono condividere lo stesso bus dCV). 
 Resta da definire il numero di Slave device che possono essere collegati al bus e per stabilire questo numero è necessario definire tipologia, quantità e dimensione dei dati da trasmettere.
-In linea teorica non esiste un reale limite al numero di slave che possiamo collegare al bus dCV, salvo il limite elettronico connesso alla potenza di trasmissione dei master e alle capacitò che si creano e possono limitare la frequenza di trasmissione (cosa rimediabiel con dei rigeneratori di segnale). Nel dCV potrebbero essere implementate 2 diverse modalità di "pairing" (abbinamento di un master device a uno slave point) che potrebbero comunque essere rese entrambe previste dal protocollo. Vediamo nello specifico quali sono.
+In linea teorica non esiste un reale limite al numero di slave che possiamo collegare al bus dCV, salvo il limite elettronico connesso alla potenza di trasmissione dei master e alle capacitò che si creano e possono limitare la frequenza di trasmissione (cosa rimediabiel con dei rigeneratori di segnale). Vediamo ora come viene gestito il "patching" (collegamenti virtuali) tra i vari master device e i moduli.
+Sfruttando le caratteristiche del bus dCV e il protocollo di comunicazione possiamo creare una matrice virtuale di connessioni che può essere modificata "on the fly", memorizzata e richiamata in qualsiasi momento (come un preset).
+Ovviamente vi sarà un solo device abilitato a svolgere questa funzione: il Master Sound Manager, l'unico che comanda l'accesso al bus.
 
-  -  
+
 
 ### HARDWARE DI TEST (prototipi)
 Per testare il sistema dCV saranno sviluppati alcuni circuiti specifici:
