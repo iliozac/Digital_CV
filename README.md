@@ -3,7 +3,7 @@
 
 ### PREMESSE
 
-  L'obiettivo principale è di sviluppare, testare e rendere disponibile in modalità open un nuovo standard di comunicazione per l'interfacciamento e il pilotaggio di moduli eurorack e sintetizzatori analogici stand alone.
+  L'obiettivo generale è di sviluppare, testare e rendere disponibile in modalità open un nuovo standard di comunicazione per l'interfacciamento e il pilotaggio di moduli eurorack e sintetizzatori analogici stand alone.
 
   Lo standard MIDI, sviluppato nei primi anni '80, è stato progettato per risolvere le esigenze di interoperabilità e sincronizzazione tra gli strumenti musicali elettronici, partendo dal presupposto che la tecnologia digitale stava ormai monopolizzando la produzione di nuovi strumenti, sia nel controllo che nella generazione dei suoni. Quello che gli ideatori del MIDI non poteva prevedere è che più avanti nel tempo la tecnologia analogica avrebbe riconquistato un suo spazio e un suo mercato in una forma più organizzata e funzionale, grazie alla nascita dello standard Eurorack ideato da Dieter Doepfer, concepito per funzionare senza un'infrastruttura di comunicazione digitale come il MIDI.
 
@@ -17,10 +17,8 @@
 ### Obiettivi
 - coprire il gap tecnologico che limita le applicazioni dei sistemi modulari rispetto alle catene di suono gestite via Midi
 - rendere possibile la configurazione di strutture di generazione di suono più articolate e dinamiche.
-- rendere semplice e funzionale il controllo di strutture modulari polifoniche/parafoniche.
-- semplificare l'interfacciamento con master keyboard, sequencer midi e tools sofware vari.
-- velocizzare il remapping delle strutture modulari, riducendo al minimo il patching manuale.
-- rendere possibile il richiamo immediato (on stage) di configurazioni pre memorizzate (preset), fondamentali per gli utilizzi "live".
+- rendere semplice e funzionale il controllo di strutture modulari polifoniche/parafoniche con master keyboard, sequencer midi e tools sofware vari.
+- velocizzare il remapping delle strutture modulari (richiamo di preset), riducendo al minimo il patching manuale per gli utilizzi "live".
 - mantenere la retrocompatibilità con i moduli classici.
 
 ### SPECIFICHE GENERALI DEL SISTEMA
